@@ -1,0 +1,14 @@
+/home/khalid/PokemonPractical/bin/Debug/net8.0/PokemonPractical
+/home/khalid/PokemonPractical/bin/Debug/net8.0/PokemonPractical.deps.json
+/home/khalid/PokemonPractical/bin/Debug/net8.0/PokemonPractical.runtimeconfig.json
+/home/khalid/PokemonPractical/bin/Debug/net8.0/PokemonPractical.dll
+/home/khalid/PokemonPractical/bin/Debug/net8.0/PokemonPractical.pdb
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.GeneratedMSBuildEditorConfig.editorconfig
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.AssemblyInfoInputs.cache
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.AssemblyInfo.cs
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.csproj.CoreCompileInputs.cache
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.dll
+/home/khalid/PokemonPractical/obj/Debug/net8.0/refint/PokemonPractical.dll
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.pdb
+/home/khalid/PokemonPractical/obj/Debug/net8.0/PokemonPractical.genruntimeconfig.cache
+/home/khalid/PokemonPractical/obj/Debug/net8.0/ref/PokemonPractical.dll
