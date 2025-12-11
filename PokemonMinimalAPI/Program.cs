@@ -32,7 +32,17 @@ app.MapPost("/pokemon", (Pokemon newPokemon) =>
     return Results.Created($"/pokemon/{newPokemon.Name}", newPokemon);
 });
 
+app.MapDelete("/pokemon/{name}", (string name) =>
+{
+    var pokemon = pokemons.FirstOrDefault(p => p.Name.ToLower() == name.ToLower());
 
+    if (pokemon == null)
+        return Results.NotFound($"Pokemon '{name}' not found.");
+
+    pokemons.Remove(pokemon);
+
+    return Results.Ok(pokemons);
+});
 
 
 
