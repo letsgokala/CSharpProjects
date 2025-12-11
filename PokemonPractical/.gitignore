@@ -1,0 +1,50 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.vs/
+.vscode/
+
+# Rider files
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Auto-generated files
+*.generated.cs
+
+# Publish folder
+publish/
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# JetBrains Rider
+.idea/
+
+# Entity Framework migrations
+Migrations/
