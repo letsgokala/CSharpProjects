@@ -15,6 +15,29 @@ app.MapGet("/pokemon", () =>
     return Results.Ok(pokemons);
 });
 
+app.MapGet("/pokemon/{name}", (string name) =>
+{
+    var pokemon = pokemons.FirstOrDefault(p => p.Name.ToLower() == name.ToLower());
+
+    if (pokemon == null)
+        return Results.NotFound($"Pokemon '{name}' not found.");
+
+    return Results.Ok(pokemon);
+});
+
+app.MapPost("/pokemon", (Pokemon newPokemon) =>
+{
+    pokemons.Add(newPokemon);
+
+    return Results.Created($"/pokemon/{newPokemon.Name}", newPokemon);
+});
+
+
+
+
+
+
+
 
 
 // Configure the HTTP request pipeline.
