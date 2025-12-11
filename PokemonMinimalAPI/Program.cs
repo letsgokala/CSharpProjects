@@ -44,7 +44,17 @@ app.MapDelete("/pokemon/{name}", (string name) =>
     return Results.Ok(pokemons);
 });
 
+app.MapPost("/pokemon/{name}/train/{amount}", (string name, int amount) =>
+{
+    var pokemon = pokemons.FirstOrDefault(p => p.Name.ToLower() == name.ToLower());
 
+    if (pokemon == null)
+        return Results.NotFound($"Pokemon '{name}' not found.");
+
+    pokemon.GainExperience(amount);
+
+    return Results.Ok(pokemon);
+});
 
 
 
