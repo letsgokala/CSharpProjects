@@ -1,3 +1,6 @@
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.XPath;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -8,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-var pokemons = new List<Pokemon>(); // In-memory Pokémon database
+var pokemons = new List<Pokemon>(){new Pokemon("pikachu"), new Pokemon("chamander"), new Pokemon("raibus")}; // In-memory Pokémon database
 
 app.MapGet("/pokemon", () =>
 {
@@ -56,7 +59,10 @@ app.MapPost("/pokemon/{name}/train/{amount}", (string name, int amount) =>
     return Results.Ok(pokemon);
 });
 
-
+app.MapGet("/iyasu", (string name) =>
+{
+    return Results.Ok("iyasu is shushing" + name);
+});
 
 
 
@@ -71,12 +77,12 @@ app.UseHttpsRedirection();
 
 var summaries = new[]
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+    "Freezing", "Bracing", "Chilly", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "something random"
 };
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast =  Enumerable.Range(0, 8).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
